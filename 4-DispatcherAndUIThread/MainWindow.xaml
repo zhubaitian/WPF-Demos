@@ -1,0 +1,16 @@
+﻿<Window x:Class="DispatcherAndUIThread.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DispatcherAndUIThread"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Label x:Name="lblHello" Content="Label" HorizontalAlignment="Left" Margin="105,170,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" Height="30" Width="450"/>
+        <Button x:Name="btnThread" Content="线程直接修改主界面" HorizontalAlignment="Left" Margin="35,245,0,0" VerticalAlignment="Top" Width="155" Height="50" Click="BtnThread_Click"/>
+        <Button x:Name="btnInvoke" Content="Dispatcher.Invoke" HorizontalAlignment="Left" Margin="245,245,0,0" VerticalAlignment="Top" Width="155" Height="50" Click="BtnInvoke_Click"/>
+        <Button x:Name="btnBeginInvoke" Content="Dispatcher.beginInvoke" HorizontalAlignment="Left" Margin="460,244,0,0" VerticalAlignment="Top" Width="155" Height="50" Click="BtnBeginInvoke_Click"/>
+
+    </Grid>
+</Window>

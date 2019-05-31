@@ -1,0 +1,44 @@
+﻿<Window x:Class="GridLayout.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GridLayout"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="139"/>
+
+            <RowDefinition Height="*"/>
+
+            <RowDefinition Height="*"/>
+
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+
+            <ColumnDefinition Width="139"/>
+
+            <ColumnDefinition Width="184*"/>
+
+            <ColumnDefinition Width="45*" />
+
+            <ColumnDefinition Width="250*"/>
+
+        </Grid.ColumnDefinitions>
+
+
+
+        <TextBlock   Grid.Row="0" Grid.ColumnSpan="1"  Text="第一行，第一列，占1列" Background="Red" HorizontalAlignment="Center"  />
+
+        <TextBlock TextWrapping="Wrap"  Background="White" FontWeight="Bold" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" Grid.RowSpan="2" Text="Grid顾名思义就是网格，它的子控件被放在一个一个实现定义好的小格子里面，整齐配列要使用Grid，首先要向RowDefinitions和ColumnDefinitions属性中添加一定数量的RowDefinitions和 ColumnDefinitions元素，从而定义行数和列数。而放置在Grid面板中的控件元素都必须显示采用附加属性语法定义其 放置所在的行和列，它们都是以0为基准的整型 值，如果没有显式设置任何行或列，Grid将会隐式地将控件加入在第0行第0列。由于Grid的组成并非简单的添加属性标记来区分行列，这也使得用户在实际应用中可以具体到某一单 元格中，所以布局起来就很精细了。 " />
+
+        <Button  Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="4" Content="第3行，第1列开始，占4列" />
+        
+        <Button Grid.Row="1" Name="btnAddByCode" Click="btnAddByCode_Click" >后台代码生成(第2行第1列)</Button>
+
+        <!--<GridSplitter Width="5" Grid.Row="1" Grid.Column="0"></GridSplitter>-->
+    </Grid>
+</Window>

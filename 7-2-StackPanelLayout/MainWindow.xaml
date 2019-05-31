@@ -1,0 +1,23 @@
+﻿<Window x:Class="StackPanelLayout.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StackPanelLayout"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel Name="stackPanel" Margin="0,0,0,182.5" Background="White" Orientation="Vertical">
+            <Button Content="第一个"/>
+            <Button Content="第二个"/>
+            <Button Content="第三个"/>
+            <Button Content="第四个"/>
+            <Button Content="第五个，改变排列方式" Click="Button_Click"/>
+        </StackPanel>
+
+        <StackPanel >
+            <TextBlock TextAlignment="Center" TextWrapping="Wrap" Text="StackPanel就是将控件按照行或列来顺序排列，但不会换行。通过设置面板的Orientation属性设置了两种排列方式：横排（Horizontal默认的）和竖排（Vertical）。纵向的StackPanel默 认每个元素宽度与面板一样宽，反之横向亦然。如果包含的元素超过了面板空间，它只会截断多出的内容。 元素的Margin属性用于使元素之间产生一定得间隔，当元素空间大于其内容的空间时，剩余空间将由HorizontalAlignment和 VerticalAlignment属性来决定如何分配。" HorizontalAlignment="Left" Margin="35,278,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="745" FontWeight="Bold"/>
+            <Button Content="后台代码实现" Click="Button_Click_1"/>
+        </StackPanel>
+    </Grid>
+</Window>

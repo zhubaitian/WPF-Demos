@@ -1,0 +1,31 @@
+﻿<Window x:Class="WrapPanelLayout.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WrapPanelLayout"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <WrapPanel  Orientation="Horizontal" Margin="0,0,15,142.5" Grid.ColumnSpan="2" >
+            <TextBlock Name="textBlock_CityID" Text="CityID:" />
+            <TextBox Name="textBox_CityID" MinWidth="100" />
+            <TextBlock Name="textBlock_CityName" Text="CityName:" />
+            <TextBox Name="textBox_CityName" MinWidth="100" />
+            <TextBlock Name="textBlock_ZipCode" Text="ZipCode:" />
+            <TextBox Name="textBox_ZipCode" MinWidth="100"  />
+            <TextBlock Name="textBlock_ProvinceID" Text="ProvinceID:" />
+            <TextBox Name="textBox_ProvinceID" MinWidth="100"   />
+            <TextBlock Name="textBlock_DateCreated" Text="DateCreated:"  />
+            <TextBox Name="textBox_DateCreated" MinWidth="100"   />
+            <TextBlock Name="textBlock_DateUpdated" Text="DateUpdated:" />
+            <TextBox Name="textBox_DateUpdated" MinWidth="100" />
+        </WrapPanel>
+        <Button Content="Add by Code" HorizontalAlignment="Left" Margin="305,360,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-4.4,1.5" Click="Button_Click" Grid.ColumnSpan="2"/>
+        <TextBlock TextAlignment="Center" TextWrapping="Wrap" Text=" WrapPanel布局面板将各个控件从左至右按照行或列的顺序罗列，当长度或高度不够是就会自动调整进行换行，后续排序按照从上至下或从右至左的顺序进行。Orientation——根据内容自动换行。当 Horizontal选项看上去类似于Windows资源管理器的缩略图视图：元素是从左向右排列的，然后自上至下自动换行。Vertical 选项看上去类似于Windows资源管理器的列表视图：元素是从上向下排列的，然后从左至右自动换行" HorizontalAlignment="Left" Margin="35,278,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="745" FontWeight="Bold"/>
+    </Grid>
+</Window>

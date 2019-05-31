@@ -1,0 +1,9 @@
+﻿<Application x:Class="ApplicationEvents.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:ApplicationEvents"
+             StartupUri="MainWindow.xaml" Startup="Application_Startup" Exit="OnApplicationExit" Activated="OnApplicationActivated" LoadCompleted="OnLoadCompleted">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>

@@ -1,0 +1,38 @@
+﻿<Window x:Class="ObjectDataProvider.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ObjectDataProvider.Services"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel>
+            <StackPanel.Resources>
+                <ObjectDataProvider x:Key="studentsProviderSource"  ObjectType="{x:Type local:StudentService}" MethodName="GetStudentList">
+                </ObjectDataProvider>
+
+                <DataTemplate x:Key="studentLayout" DataType="studentsProviderSource">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding Path=Name}"
+                            FontWeight="Bold" Foreground="Blue"/>
+                        <TextBlock Text=", "></TextBlock>
+                        <TextBlock Text="{Binding Path=Age}"></TextBlock>
+                        <TextBlock Text=", "></TextBlock>
+                        <TextBlock Text="{Binding Path=Birthday}"></TextBlock>
+                        <TextBlock Text=", "></TextBlock>
+                        <TextBlock Text="{Binding Path=Country}"></TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+
+            </StackPanel.Resources>
+
+            <TextBlock Width="248" Height="24" Text="对象数据绑定:" TextWrapping="Wrap"/>
+            <ListBox x:Name="listObjectBind" Width="450" Height="100" IsSynchronizedWithCurrentItem="True"
+                     ItemsSource="{Binding Source={StaticResource studentsProviderSource}}"
+                     ItemTemplate="{DynamicResource studentLayout}"
+                     >
+            </ListBox>
+        </StackPanel>
+    </Grid>
+</Window>

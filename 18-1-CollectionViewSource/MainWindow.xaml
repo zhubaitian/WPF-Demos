@@ -1,0 +1,46 @@
+﻿<Window x:Class="CollectionViewSource.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CollectionViewSource.Services"
+        
+        xmlns:scm="clr-namespace:System.ComponentModel;assembly=WindowsBase"
+        
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+
+        <Grid.Resources>
+            <ObjectDataProvider x:Key="studentsProviderSource"  ObjectType="{x:Type local:StudentService}" MethodName="GetStudentList"></ObjectDataProvider>
+            <CollectionViewSource x:Key="studentsViewSource" Source="{Binding Source={StaticResource studentsProviderSource}}">
+                <CollectionViewSource.SortDescriptions>
+                    <scm:SortDescription PropertyName="Name" Direction="Descending" />
+                    <scm:SortDescription PropertyName="Age" Direction="Ascending" />
+                </CollectionViewSource.SortDescriptions>
+            </CollectionViewSource>
+        </Grid.Resources>
+
+        <!--直接使用ObjectDataProvider的情况-->
+        <!--<StackPanel DataContext="{StaticResource studentsProviderSource}">-->
+        
+        <!--使用CollectionViewSource多情况-->
+        <StackPanel DataContext="{StaticResource studentsViewSource}">
+            
+            <TextBlock Width="248" Height="24" Text="数据排序:" TextWrapping="Wrap"/>
+
+            <DataGrid  AutoGenerateColumns="False" 
+                       ItemsSource="{Binding}" CanUserAddRows="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding Name}" Header="名称" />
+                    <DataGridTextColumn Binding="{Binding Age}" Header="年龄" />
+                    <DataGridTextColumn Binding="{Binding Country}" Header="国家" />
+                    <DataGridTextColumn Binding="{Binding Birthday}" Header="出生日期" />
+                </DataGrid.Columns>
+                
+            </DataGrid>
+            
+        </StackPanel>
+        
+    </Grid>
+</Window>

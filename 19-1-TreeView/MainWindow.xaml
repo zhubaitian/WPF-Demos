@@ -1,0 +1,44 @@
+﻿<Window x:Class="TreeView.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TreeView"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TreeView Name="dictree" ItemsSource="{Binding}">
+
+            <TreeView.Resources>
+
+                <HierarchicalDataTemplate ItemsSource="{Binding Value}" DataType="{x:Type local:Job}">
+
+                    <TextBlock Text="{Binding Id}"><TextBlock Text="{Binding Name}"></TextBlock></TextBlock>
+
+                </HierarchicalDataTemplate>
+
+            </TreeView.Resources>
+
+            <TreeView.ItemTemplate>
+
+                <HierarchicalDataTemplate ItemsSource="{Binding Value}">
+
+                    <TextBlock Text="{Binding Key}"></TextBlock>
+
+                    <HierarchicalDataTemplate.ItemTemplate>
+
+                        <DataTemplate>
+
+                            <TextBlock Text="{Binding Name}"></TextBlock>
+
+                        </DataTemplate>
+
+                    </HierarchicalDataTemplate.ItemTemplate>
+
+                </HierarchicalDataTemplate>
+
+            </TreeView.ItemTemplate>
+
+        </TreeView>
+    </Grid>
+</Window>

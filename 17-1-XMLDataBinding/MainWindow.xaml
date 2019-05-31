@@ -1,0 +1,25 @@
+﻿<Window x:Class="XMLDataBinding.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:XMLDataBinding"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel>
+            <StackPanel.Resources>
+                <XmlDataProvider x:Key="MyColors"  Source="Colors.xml"  XPath="colors">
+                </XmlDataProvider>
+            </StackPanel.Resources>
+
+            <TextBlock Width="248" Height="24" Text="XML数据绑定:" TextWrapping="Wrap"/>
+            <ListBox x:Name="listXmlColor" Width="248" Height="56" IsSynchronizedWithCurrentItem="True"
+                     ItemsSource="{Binding Source={StaticResource MyColors},XPath=color/@name}">
+            </ListBox>
+
+            <TextBlock Width="248" Height="24" Text="选中的颜色:" />
+            <TextBlock Width="248" Height="24" Text="{Binding ElementName=listXmlColor,  Path=SelectedValue, Mode=OneWay}"></TextBlock>
+        </StackPanel>
+    </Grid>
+</Window>

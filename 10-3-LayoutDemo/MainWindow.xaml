@@ -1,0 +1,53 @@
+﻿<Window x:Class="LayoutDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LayoutDemo"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="25"/>
+        </Grid.RowDefinitions>
+
+        <DockPanel LastChildFill="True" Grid.Row="0">
+            <Menu   Height="25"  Width="Auto" Name="menuTop" DockPanel.Dock="Top" >
+                <MenuItem Header="文件" HorizontalAlignment="Left">
+                    <MenuItem Header="打开" /> 　　　　　　　　　　
+                    <MenuItem Header="保存" />
+                </MenuItem>
+                <MenuItem Header="帮助" HorizontalAlignment="Left">
+                    <MenuItem Header="查看帮助" />
+                    <MenuItem Header="技术支持" />
+                    <Separator />
+                    <MenuItem Header="关于" />
+                </MenuItem>
+            </Menu>
+
+            <Canvas Width="100" x:Name="cvsGround"  DockPanel.Dock="Left" Background="Gray">
+                <WrapPanel Width="100"  x:Name="grdTransfer" Canvas.Left="0" Background="SkyBlue"  Orientation="Vertical">
+                    <Button Width="100" Height="64"  x:Name="btn1" Content="1" Background="SkyBlue" />
+                    <Button Width="100" Height="64" x:Name="btn2" Content="2" Background="Orange" />
+                    <Button Width="100" Height="64" x:Name="btn3" Content="3" Background="Red" />
+                    <Button Width="100" Height="64" x:Name="btn4" Content="4" Background="Green" />
+                    <Button Width="100" Height="64"  x:Name="btn5" Content="5" Background="Yellow" />
+                </WrapPanel>
+            </Canvas>
+
+            <Grid >
+                <Viewbox Stretch="Fill">
+                    <TextBlock Text="中间内容" TextAlignment="Center" Background="AliceBlue" Width="312" Height="167"></TextBlock>
+                </Viewbox>
+            </Grid>
+            
+        </DockPanel>
+
+        <StatusBar Height="25" Name="StatusBar1"  Grid.Row="1">
+            <StatusBarItem Content="状态栏" Name="S1" HorizontalAlignment="Left"/>
+            <StatusBarItem Content="" Name="lblCurrTime"/>
+            <StatusBarItem Content="第三栏" Name="StatusBar3" Width="100"/>
+        </StatusBar>
+    </Grid>
+</Window>
