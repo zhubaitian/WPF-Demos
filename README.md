@@ -1,2 +1,2 @@
 # WPF-Demos
-Small demos on quit learning of WPF of windows
+Small demos on quick learning of WPF programing on windows
