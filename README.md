@@ -1,5 +1,5 @@
 # WPF-Demos
-A bunch of small demo project on quick starting of WPF programing on Windows. The demos are mainly provided by 'DotNet菜园' from his [WPF Introduction](https://www.cnblogs.com/chillsrc/category/684419.html) series. And I would also add some demos which are useful for me, I hope this would work for you as well.
+A bunch of small demo projects on quick starting of WPF programing on Windows. The demos are mainly provided by 'DotNet菜园' from his [WPF Introduction](https://www.cnblogs.com/chillsrc/category/684419.html) series. And I would also add some demos which are useful for me, I hope this would work for you as well.
 
 # Demo Projects Brief Introduction
 ---
