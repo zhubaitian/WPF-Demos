@@ -79,4 +79,13 @@ During registering a dependencyproperty, we could pass several callbacks to the 
 ### 14-2-DependencyPropertyValidationDemo
 A more concrete demo on how to use the callbacks of the dependencyproperty to do the validation of the input, and coerce the change of it if the input's not within the valid range.
 
+### 15-DataBinding
+Simple demo on how to bind the Text of a TextBlock to the selected item of a ListBox. Once the selected item changed, the TextBlock would show the corresponding value selected.
+
+### 16-DataBindingMode
+Demo on how different binding modes work. 
+- **OneWay**: Select a color item of the listbox, corresponding value and background color of the OneWay binding TextBlock would be changed
+- **TwoWay**: The TwoWay binding TextBox could not only take effect after selecting a color item of the listbox, but also could affect the selection of the listbox after typing in the name of the color in the TextBox backward.
+
+### 17-1-XMLDataBinding
 
