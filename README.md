@@ -92,6 +92,13 @@ Demo on how to bind the xml data to WPF controls by specifying the XmlDataProvid
 
 ### 17-2-ObjectDataProvider
 Demo on how to bind a normal list of objects(The object class consit of the list are just normal class, does not derived from any other classes) to the WPF controls by speicifying ObjectDataProvider property of Control.Resource in xaml. 
+
 This demo also shows how to use DataTemplate to display the list of data, please be aware of that.
+
+### 18-1-CollectionViewSource
+By using the CollectionViewSource rather than ObjectDataProvider as the data source specified in the xaml, we could be able to specify the sorting order of the data
+
+### 18-2-DataBindingDemo
+An overall demo on the binding related knowledges we've leant above.
 
 
