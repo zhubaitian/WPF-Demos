@@ -27,6 +27,26 @@ Takeaway:
 
 ### 7-2-StackPanelLayout
 Simple stackpanel layout demo. Similar to wrappanel, stackpanel would place the controls within it by row or column automatically, but, it would not wrap automatically.
+
 Takeaway:
 - Set Orientation="Vertical|Horizontal" to specify the direction of how controls within it are placed
 - By default, every control within it would be with the same width(Orientation=Vertical) or height(Orientail=Horizontal) as the stackpanel, it makes the controls like stacking up together, and I think that's why we call it the stackpanel
+
+### 8-1-GridLayout
+Simple grid layout demo. 
+
+Takeaway:
+- Use <Grid.RowDefinitions> and <Grid.ColumnDefinitions> to define how many rows and columns the grid has, and could also specify the height of the row and the width of the column
+  - **\<ColumnDefinition Width="*"\/\>**: Use as much space left of the parent control as possible
+  - **\<ColumnDefinition Width="139"\/\>**: Set the width of the column to 139 pixels
+  - **\<ColumnDefinition Width="auto"\/\>**: Set the width of the column as less space of the parent control as possible
+- Use Grid.Row and Grid.Column in controls within grid to specify which row and/or column the control could be placed into.
+- Use Grid.ColmnSpan or Grid.RowSpan to specify how many columns or rows the control would span in the grid
+
+### 8-2-GridSplitter
+Demos on how to use the GridSplitter to split the grid layout. Please be aware of the property of Grid.RowSpan and Grid.ColumnSpan, it'd be quite useful here.
+
+### 8-3-UniformGridLayout
+Demo on UniformGrid. It's a simplify version of Grid layout where you could specify the row and columns of it, and there are no attachedproperties of Grid.Row and Grid.Column for the controls within it to be used. 
+
+
