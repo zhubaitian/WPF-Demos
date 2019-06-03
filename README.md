@@ -53,7 +53,7 @@ Demo on UniformGrid. It's a simplify version of Grid layout where you could spec
 Dockepanel would dock the controls within it by specifying the attachedproperty of DockePanel.Dock, for instance, \<Button DockPanel.Dock="Left" \/\> would dock the button to the left of the parent dockpanel
 
 Takeaway:
-- If set the property of LastChildFill for DockPanel to True, the last controls within the DockPanel would take up all the space left of it.
+- If set the property of LastChildFill for DockPanel to True, the last control within the DockPanel would take up all the space left.
 
 
 
