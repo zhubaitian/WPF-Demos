@@ -70,5 +70,13 @@ To demonstrate all the layouts we learnt above
 ### 11-1-DependencyProperty
 Demo on how to create a customized DependencyProperty in a customized DependencyObject, and how to bind the DependencyProperty to the Label and Textbox control. Once we change the content of the Textbox, the corresponding dependencyproperty would be updated, and the Label would show the changes of it.
 
+### 13-1-ReadonlyDependencyProperty
+Demo on how to create and use of a readonly dependencyproperty
+
+### 14-1-DependencyPropertyValidation
+During registering a dependencyproperty, we could pass several callbacks to the register function, once we change the value of the dependencyproperty, those callbacks would be triggerred to validate the changes. Please check the output after click on the button of the demo app, and refer to the blog to get better understanding if necessary.
+
+### 14-2-DependencyPropertyValidationDemo
+A more concrete demo on how to use the callbacks of the dependencyproperty to do the validation of the input, and coerce the change of it if the input's not within the valid range.
 
 
