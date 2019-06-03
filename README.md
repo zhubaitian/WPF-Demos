@@ -49,4 +49,11 @@ Demos on how to use the GridSplitter to split the grid layout. Please be aware o
 ### 8-3-UniformGridLayout
 Demo on UniformGrid. It's a simplify version of Grid layout where you could specify the row and columns of it, and there are no attachedproperties of Grid.Row and Grid.Column for the controls within it to be used. 
 
+### 9-1-DockPanelLayout
+Dockepanel would dock the controls within it by specifying the attachedproperty of DockePanel.Dock, for instance, \<Button DockPanel.Dock="Left" \/\> would dock the button to the left of the parent dockpanel
+
+Takeaway:
+- If set the property of LastChildFill for DockPanel to True, the last controls within the DockPanel would take up all the space left of it.
+
+
 
