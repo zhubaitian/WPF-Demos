@@ -55,5 +55,20 @@ Dockepanel would dock the controls within it by specifying the attachedproperty 
 Takeaway:
 - If set the property of LastChildFill for DockPanel to True, the last control within the DockPanel would take up all the space left.
 
+### 9-2-ViewBoxLayout
+Please try different options of Stretch and StretchDirection properties and then resize the window to view the effect.
+
+### 10-1-BorderLayout
+There could be only one control within the Border layout, Border is used to set the border and background of the control
+
+### 10-2-ScrollViewLayout
+Demo on how to use ScrollView to view the content of a Textbox
+
+### 10-3-LayoutDemo
+To demonstrate all the layouts we learnt above
+
+### 11-1-DependencyProperty
+Demo on how to create a customized DependencyProperty in a customized DependencyObject, and how to bind the DependencyProperty to the Label and Textbox control. Once we change the content of the Textbox, the corresponding dependencyproperty would be updated, and the Label would show the changes of it.
+
 
 
