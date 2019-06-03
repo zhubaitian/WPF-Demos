@@ -88,4 +88,10 @@ Demo on how different binding modes work.
 - **TwoWay**: The TwoWay binding TextBox could not only take effect after selecting a color item of the listbox, but also could affect the selection of the listbox after typing in the name of the color in the TextBox backward.
 
 ### 17-1-XMLDataBinding
+Demo on how to bind the xml data to WPF controls by specifying the XmlDataProvider. Please notice that we use the XPath to get the corresponding value of within the xml file.
+
+### 17-2-ObjectDataProvider
+Demo on how to bind a normal list of objects(The object class consit of the list are just normal class, does not derived from any other classes) to the WPF controls by speicifying ObjectDataProvider property of Control.Resource in xaml. 
+This demo also shows how to use DataTemplate to display the list of data, please be aware of that.
+
 
