@@ -3,7 +3,7 @@ A bunch of small demo project on quick starting of WPF programing on Windows. Th
 
 # Demo Projects Brief Introduction
 ---
-This visual studio solutons consist of different small projects, following are the brief introduction on each of them. 
+This visual studio solutions consist of different small projects, following are the brief introduction on each of them. 
 
 ### 2-StartApplicationByCode
 Mainly demonstrate on how to start the wpf application by code in App.cs rather than using the default App.xaml configuration.
@@ -32,7 +32,7 @@ Simple stackpanel layout demo. Similar to wrappanel, stackpanel would place the 
 
 Takeaway:
 - Set Orientation="Vertical|Horizontal" to specify the direction of how controls within it are placed
-- By default, every control within it would be with the same width(Orientation=Vertical) or height(Orientail=Horizontal) as the stackpanel, it makes the controls like stacking up together, and I think that's why we call it the stackpanel
+- By default, every control within it would be with the same width(Orientation=Vertical) or height(Orientation=Horizontal) as the stackpanel, it makes the controls like stacking up together, and I think that's why we call it the stackpanel
 
 ### 8-1-GridLayout
 Simple grid layout demo. 
@@ -43,7 +43,7 @@ Takeaway:
   - **\<ColumnDefinition Width="139"\/\>**: Set the width of the column to 139 pixels
   - **\<ColumnDefinition Width="auto"\/\>**: Set the width of the column as less space of the parent control as possible
 - Use Grid.Row and Grid.Column in controls within grid to specify which row and/or column the control could be placed into.
-- Use Grid.ColmnSpan or Grid.RowSpan to specify how many columns or rows the control would span in the grid
+- Use Grid.ColumnSpan or Grid.RowSpan to specify how many columns or rows the control would span in the grid
 
 ### 8-2-GridSplitter
 Demos on how to use the GridSplitter to split the grid layout. Please be aware of the property of Grid.RowSpan and Grid.ColumnSpan, it'd be quite useful here.
@@ -52,7 +52,7 @@ Demos on how to use the GridSplitter to split the grid layout. Please be aware o
 Demo on UniformGrid. It's a simplify version of Grid layout where you could specify the row and columns of it, and there are no attachedproperties of Grid.Row and Grid.Column for the controls within it to be used. 
 
 ### 9-1-DockPanelLayout
-Dockepanel would dock the controls within it by specifying the attachedproperty of DockePanel.Dock, for instance, \<Button DockPanel.Dock="Left" \/\> would dock the button to the left of the parent dockpanel
+Dockpanel would dock the controls within it by specifying the attachedproperty of DockPanel.Dock, for instance, \<Button DockPanel.Dock="Left" \/\> would dock the button to the left of the parent dockpanel
 
 Takeaway:
 - If set the property of LastChildFill for DockPanel to True, the last control within the DockPanel would take up all the space left.
@@ -93,7 +93,7 @@ Demo on how different binding modes work.
 Demo on how to bind the xml data to WPF controls by specifying the XmlDataProvider. Please notice that we use the XPath to get the corresponding value of within the xml file.
 
 ### 17-2-ObjectDataProvider
-Demo on how to bind a normal list of objects(The object class consit of the list are just normal class, does not derived from any other classes) to the WPF controls by speicifying ObjectDataProvider property of Control.Resource in xaml. 
+Demo on how to bind a normal list of objects(The object class consit of the list are just normal class, does not derived from any other classes) to the WPF controls by specifying ObjectDataProvider property of Control.Resource in xaml. 
 
 This demo also shows how to use DataTemplate to display the list of data, please be aware of that.
 
