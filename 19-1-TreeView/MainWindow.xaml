@@ -6,39 +6,27 @@
         xmlns:local="clr-namespace:TreeView"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <TreeView Name="dictree" ItemsSource="{Binding}">
 
+    <DockPanel>
+        <TreeView Name="treeView">
             <TreeView.Resources>
+                <HierarchicalDataTemplate DataType = "{x:Type local:League}"
+                                ItemsSource = "{Binding Path=Divisions}">
 
-                <HierarchicalDataTemplate ItemsSource="{Binding Value}" DataType="{x:Type local:Job}">
-
-                    <TextBlock Text="{Binding Id}"><TextBlock Text="{Binding Name}"></TextBlock></TextBlock>
-
+                    <TextBlock Text="{Binding Path=Name}"/>
                 </HierarchicalDataTemplate>
 
+                <HierarchicalDataTemplate DataType    = "{x:Type local:Division}"
+                                ItemsSource = "{Binding Path=Teams}">
+                    <TextBlock Text="{Binding Path=Name}"/>
+                </HierarchicalDataTemplate>
+
+                <DataTemplate DataType="{x:Type local:Team}">
+                    <TextBlock Text="{Binding Path=Name}"/>
+                </DataTemplate>
             </TreeView.Resources>
-
-            <TreeView.ItemTemplate>
-
-                <HierarchicalDataTemplate ItemsSource="{Binding Value}">
-
-                    <TextBlock Text="{Binding Key}"></TextBlock>
-
-                    <HierarchicalDataTemplate.ItemTemplate>
-
-                        <DataTemplate>
-
-                            <TextBlock Text="{Binding Name}"></TextBlock>
-
-                        </DataTemplate>
-
-                    </HierarchicalDataTemplate.ItemTemplate>
-
-                </HierarchicalDataTemplate>
-
-            </TreeView.ItemTemplate>
-
         </TreeView>
-    </Grid>
+
+    </DockPanel>
+
 </Window>
