@@ -105,3 +105,6 @@ An overall demo on the binding related knowledges we've leant above.
 
 ### 19-1-TreeView
 Demo on basic usage of the Treeview. The code at backend would specify the data source of the treeview by setting the DataContext or ItemSource of the Treeview, then the xaml file would specify how to display the data with HierarchicalDataTemplate property.
+
+### ResourceDictionaryDemo
+Demo on how to apply styles to controls based on resource dictionary, and how to extract the resource dictionary to a separated resource file.
