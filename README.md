@@ -108,3 +108,28 @@ Demo on basic usage of the Treeview. The code at backend would specify the data 
 
 ### ResourceDictionaryDemo
 Demo on how to apply styles to controls based on resource dictionary, and how to extract the resource dictionary to a separated resource file.
+
+### ValueConverterDemo
+Demo on how to convert the binding value of control to a different format, and how to convert it back. 
+
+### ControlTemplateDemo
+Demo on how to customize a button by applying the ControlTemplate.
+
+Takeaway:
+- If no Key specified, the style resource would be applied to all the same TargetType within the context. For instance, forllowing style would be applied to all button within this page.
+``` xaml
+<Style TargetType="Button">
+      <Setter Property="Width" Value="130"/>
+      <Setter Property="Height" Value="130"/>
+</Style>
+
+<ControlTemplate TargetType="Button" x:Key="BtnTemplate">
+   ...
+</ControlTemplate>
+
+```
+- Since the style of the button's overriten by the ControlTemplate, we need to provide the ContentControl to bind the Content of the parent button container, in order to display the text correctly.
+```xaml
+<ContentControl VerticalAlignment="Center" HorizontalAlignment="Center" Content="{TemplateBinding Content}"/>
+
+```
