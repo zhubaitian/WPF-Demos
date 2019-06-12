@@ -133,3 +133,9 @@ Takeaway:
 <ContentControl VerticalAlignment="Center" HorizontalAlignment="Center" Content="{TemplateBinding Content}"/>
 
 ```
+
+### DataTemplateDemo
+Shows different ways on using the DataTemplate on ListBox
+
+### HierarchicalDataTemplateDemo
+Demo on how to use HierarchicalDataTemplate on a TreeView.
